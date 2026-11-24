@@ -1360,3 +1360,46 @@ button {
         display: none;
     }
 }
+
+/* NUEVO ESTILO DE LISTADO DE SERVICIOS */
+
+.service-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    list-style: none;
+    margin-top: 25px;
+}
+
+.service-content li {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.service-content li:not(:last-child)::after {
+    content: "·";
+    margin-left: 12px;
+    font-weight: 700;
+}
+
+/* ADAPTACIÓN MÓVIL */
+
+@media (max-width: 768px) {
+    .service-content li {
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .service-content ul {
+        gap: 6px 8px;
+    }
+
+    .service-content li:not(:last-child)::after {
+        margin-left: 8px;
+    }
+}
